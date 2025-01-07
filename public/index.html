@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Upload</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      .progress-container {
+        margin-top: 10px;
+        width: 100%;
+        background-color: #f3f3f3;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+      .progress-bar {
+        height: 20px;
+        background-color: #4caf50;
+        width: 0;
+        transition: width 0.2s ease;
+      }
+      .progress-text {
+        text-align: center;
+        font-size: 14px;
+        margin-top: 10px;
+      }
+      #preview {
+        margin-top: 20px;
+        display: none;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      video {
+        max-width: 100%;
+        height: auto;
+        controls: true;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Upload File</h1>
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <div class="progress-text" id="progressText">0%</div>
+    <input type="file" id="fileInput" />
+    <button id="submitBtn" disabled>Submit</button>
+
+    <div id="preview">
+      <h3>Preview:</h3>
+      <img id="imagePreview" />
+      <video id="videoPreview" controls></video>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
